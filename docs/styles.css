@@ -1,12 +1,68 @@
 body{
-    background: lightcoral;
+    background: #242C70;
 }
 .btn-tab{
-    width: 50px;
-    height: 50px;
-    font-size: xx-large;
+    width: 100px;
+    height: 100px;
+    font-size: 75px;
+    color: #242C70;
+    background: #3C49BD;
+    opacity: 90%;
 }
-div{
-    display: grid;
-    justify-content: center;    
+.btn-tab:hover{
+    background:#464A70;
+}
+#intro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 430px;
+    color: #242C70;
+    background:#969FF2;
+    text-align: justify;
+    padding: 22px;
+    border-radius: 25px;
+}
+#ganador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 150px; */
+    border-radius: 50%;
+    text-align: center;
+    background: #464A70;
+    padding: 20px;
+    color: #969FF2;
+}
+.contenedores{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#juego{
+    color:#242C70;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 430px;
+    background:#969FF2;
+    text-align: justify;
+    padding: 22px;
+    border-radius: 25px;
+}
+#texto{
+    color: #242C70;
+    font-size: 25px;
+}
+input::placeholder{
+    color: #969FF2 ;
+}
+.cont-input{
+    color: #969FF2;
+    background: #3C49BD;
+    height: 25px;
+    border-radius: 25px;
 }
