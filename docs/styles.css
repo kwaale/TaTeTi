@@ -66,3 +66,15 @@ input::placeholder{
     height: 25px;
     border-radius: 25px;
 }
+#play{
+    display: flex;
+    background-color: #3C49BD;
+    height: 50px;
+    width: 100%;
+    border-radius: 26px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #242C70;
+    font-size: 25px;
+}

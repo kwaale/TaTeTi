@@ -1,35 +1,27 @@
-//Favicon
-// - La foto esta demasiado pegada al borde izquierdo, dale espacio
-// - ponerle Favicon a la página y subpaginas. No se si tu foto sea un
-// buen Favicon para el cv 
-// - no me gusta mucho el fondo, no se ve tan serio. Se que tu no eres diseñador
-// y que no vendes eso, pero creo que una página con una imagen más moderna
-// y limpia atrae más
-//*************Corregir que aparezca nombre ganador */
 let turno;
 let arr;
 
 function start(){
     turno = "";
     arr = [0,1,2,3,4,5,6,7,8];
-    document.getElementById('jugadorX').addEventListener('submit', ()=>console.log("LISTENER"))
-    document.getElementById('jugadorO').addEventListener('blur', ()=>console.log("LISTENER Blur"))
+    console.log("Prueba");    
     for(let i = 0; i < 9; i++){
-        document.getElementById(`bt${i}`).addEventListener("click", cambia)
+        document.getElementById(`bt${i}`).addEventListener("click", cambia);
     }
+    document.getElementById('play').addEventListener("click", ()=>window.location.reload());
 }
 
 //Solo para iterar entre "X" y "O" y controlar que no se repita.
 function cambia(e){
+    //Si hubo ganador retorna para que no se pueda jugar mas.
+    if(document.getElementById('ganador').firstChild.data !== "A Jugar") return;
     const btnId = e.target.id;
     const content = document.getElementById(btnId);
-    if (!content.value)console.log("content.value", content.value);
     if (content.value !== "X" && content.value !== "O") {
         turno === "X" ? turno ="O":turno = "X";
         content.value = turno;
         ganardor(btnId);
     }
-    
 }
 //Creando elemento ganador
 const elementoWin = (a)=>{
